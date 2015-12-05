@@ -110,7 +110,7 @@ class Twig_Environment
         $this->debug = (bool) $options['debug'];
         $this->charset = strtoupper($options['charset']);
         $this->baseTemplateClass = $options['base_template_class'];
-        $this->autoReload = !$options['auto_reload'] ? $this->debug : true;
+        $this->autoReload = (!$options['auto_reload']) ? $this->debug : true;
         $this->strictVariables = (bool) $options['strict_variables'];
         $this->setCache($options['cache']);
 
